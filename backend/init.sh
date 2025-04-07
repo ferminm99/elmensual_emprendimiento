@@ -27,7 +27,9 @@ echo "✅ .env copiado:"
 cat .env
 
 # 📦 Dependencias y cache limpio
-composer install --optimize-autoloader --no-dev
+composer install --no-scripts --no-autoloader
+composer dump-autoload --optimize
+
 
 php artisan config:clear
 php artisan config:cache
