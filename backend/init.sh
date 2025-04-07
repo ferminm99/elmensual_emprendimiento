@@ -32,6 +32,9 @@ composer install --optimize-autoloader --no-dev
 php artisan config:clear
 php artisan config:cache
 
+php artisan tinker --execute="echo config('session.same_site');"
+
+
 # 🛠️ Migraciones (evitamos crash si ya existen)
 # php artisan migrate --force || true
 
