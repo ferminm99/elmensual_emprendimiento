@@ -20,6 +20,10 @@ Route::get('/debug-cookies', function () {
     ]);
 });
 
+Route::get('/debug-session', function () {
+    return session()->all();
+});
+
 // Autenticación
 Route::middleware([
     EnsureFrontendRequestsAreStateful::class,
